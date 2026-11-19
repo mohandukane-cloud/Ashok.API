@@ -1,0 +1,15 @@
+@API_HostAddress = http://localhost:5213
+
+GET {{API_HostAddress}}/weatherforecast
+Accept: application/json
+
+###
+
+POST {{API_HostAddress}}/weatherforecast
+Content-Type: application/json
+
+{
+  "date": "2026-01-15",
+  "temperatureC": 12,
+  "summary": "Mild"
+}
