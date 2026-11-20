@@ -17,6 +17,10 @@ public partial class Program
             options.UseSqlServer(builder.Configuration.GetConnectionString("WeatherDatabase")));
         builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
         builder.Services.AddScoped<IWeatherForecastRepository, EfWeatherForecastRepository>();
+        builder.Services.AddScoped<IUserService, UserService>();
+        builder.Services.AddScoped<IUserRepository, EfUserRepository>();
+        builder.Services.AddScoped<IVisitorService, VisitorService>();
+        builder.Services.AddScoped<IVisitorRepository, EfVisitorRepository>();
 
         var app = builder.Build();
 
